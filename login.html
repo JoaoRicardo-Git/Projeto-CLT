@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Esse programa ira servir para Funcionarios e Empresas a gerenciar melhor seus a fazeres.">
+    <title> CLT | Login </title>
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+    <form>
+        <h1>Login</h1>
+        <input type="text" placeholder="Login..." id="login">
+        <input type="password" placeholder="Senha..." id="senha">
+        <input type="submit" onclick="logar(); return false">
+        <button id="cadas" onclick="irCadastra(); return false">cadastro</button>
+    </form>
+
+    <script>
+
+        function logar(){
+
+            // Essa Variavel vai receber oque vier no Login(input)
+            // Para ele não pegar o "Input" use .VALUE(minusculo) para ele pegar o valor que foi dado para esse Input.
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login === 'joao' && senha === '1127'){
+
+                // Para que esse codigo funcione precisa colocar: "logar(); return false" no ONCLICK, Para ele parar de espera a validação do formulario e fazer oque é pedido.
+                location.href = "home.html";
+
+            } else{
+
+                alert( 'Login ou Senha incorreto.' )
+
+            }
+
+
+        }
+
+        function irCadastra(){
+
+            // "addEventListener" serve para dizer oque vai acontecer se esse objeto for clicado.
+            if (cadas = addEventListener){
+                location.href = 'new_user.html';
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
